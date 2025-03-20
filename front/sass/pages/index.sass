@@ -1,0 +1,412 @@
+$blue: #000055
+$dark-blue: #000056
+$bluBtn: #00003D
+$btn: #05C489
+$btn-hover: #05b37c
+$white: #ffffff
+$magenta: #FF267E
+$grey: #D9D9D9
+$grey-light: #DBDBDB
+
+$font-suisseintl-reg: SuisseIntl-Regular, sans-serif //400
+$font-suisseintl-med: SuisseIntl-Medium, sans-serif //500
+$font-suisseintl-semibold: SuisseIntl-SemiBold, sans-serif //600
+$font-suisseintl-bold: SuisseIntl-Bold, sans-serif //700
+
+$font-roboto-black: Roboto-Black, sans-serif //900
+
+body
+  -webkit-tap-highlight-color: transparent
+  overscroll-behavior: none
+  background: $bluBtn
+  &.light
+    background: $blue
+  img
+    max-width: 100%
+    height: auto
+.depositBtn
+  cursor: pointer
+  padding: 3px 10px 1px 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $btn
+  transition: .4s ease-in-out
+  letter-spacing: 0.32px
+  text-transform: uppercase
+  font-size: 18px
+  color: $bluBtn
+  font-family: $font-suisseintl-semibold
+  min-width: 298px
+  border-radius: 3.4px
+  height: 71px
+  max-width: fit-content
+  &:hover
+    background-color: $btn-hover
+  &.big
+    font-size: 32px
+    min-width: 397px
+    border-radius: 7px
+    height: 99px
+.container
+  max-width: 1246px
+  width: 100%
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+  &.welcome__top
+    max-width: 1920px
+.welcome
+  width: 100%
+  overflow: hidden
+  &__top
+    height: 692px
+    flex-direction: row
+    justify-content: center
+    position: relative
+    background: url('../img/bg-desk.jpg') no-repeat 50% 0%/cover
+    @media screen and (min-width: 600px) and (orientation: landscape) and (min-height: 501px)
+      background: url('../img/bg-desk.jpg') no-repeat 50% 0%/cover
+    @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
+      background: url('../img/bg-tab.jpg') no-repeat 50% 0/cover
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: url("../img/bg-mob.jpg") no-repeat 100% 0%/cover
+    @media (max-width: 950px) and (orientation: landscape) and (max-height: 500px)
+      background: url("../img/bg-landscape.jpg") no-repeat 100% 100%/cover
+    &:after
+      content: ""
+      position: absolute
+      display: block
+      width: 100%
+      height: 100px
+      left: 0
+      bottom: -1px
+      background: linear-gradient(180deg, rgba(0, 0, 61, 0) 0%, rgba(0, 0, 61, 1.92) 100%)
+    &-left
+      //margin-left: 64px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &-right
+      overflow: hidden
+      //width: 1023px
+      width: 900px
+      align-self: flex-end
+      margin-left: -65px
+  &__block
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-bottom: 99px
+    position: relative
+    &-title
+      color: $white
+      font-family: $font-suisseintl-med
+      font-size: 43px
+      letter-spacing: 0.4px
+      text-transform: uppercase
+      white-space: nowrap
+    &-cont
+      display: flex
+      flex-direction: column
+      width: 436px
+      position: relative
+      z-index: 3
+      &:before
+        z-index: 3
+        content: ""
+        position: absolute
+        display: block
+        bottom: calc(50% - 25.5px)
+        left: -30.5px
+        width: 61.3px
+        height: 51px
+        background: url(../img/plus.svg) no-repeat 0 0 / contain
+      &:after
+        z-index: 1
+        bottom: -50px
+        left: -36px
+        content: ""
+        position: absolute
+        width: 507px
+        height: 147px
+        background: url(../img/bonus-shadow.png) no-repeat 50% 62% / cover
+    &-txt
+      display: flex
+      justify-content: center
+      color: $white
+      font-size: 64px
+      letter-spacing: 0.64px
+      text-transform: uppercase
+      font-family: $font-suisseintl-semibold
+      max-height: 71px
+      z-index: 2
+      &.txtMagenta
+        background-color: $magenta
+        padding-left: 30px
+        white-space: nowrap
+        span
+          font-family: $font-suisseintl-semibold
+          color: $white
+          font-size: 29px
+          letter-spacing: 0.29px
+          text-transform: uppercase
+          margin-right: 14px
+          display: flex
+          align-items: flex-end
+      &.txtBlue
+        background-color: $dark-blue
+        align-items: center
+  &__center
+    margin-top: 31px
+    &-bonuses
+      display: flex
+      justify-content: center
+      margin-bottom: 30px
+    .bonusItem
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-end
+      position: relative
+      width: 221px
+      height: 234px
+      border-radius: 4px
+      padding-bottom: 16px
+      background: linear-gradient(0deg, rgba(0, 0, 61, 0.54) 0%, rgba(0, 0, 61, 0.54) 58.9%, rgba(0, 0, 61, 0.54) 83.76%), radial-gradient(103.34% 76.82% at 50.23% 56.37%, rgba(56, 60, 162, 0.71) 61.34%, rgba(0, 0, 61, 0.00) 80.14%)
+      &:not(:last-child)
+        margin-right: 32px
+      &:nth-child(1)
+        .bonusItem__numb
+          background: url(../img/circle-1.png) no-repeat 50% 0% / cover
+      &:nth-child(2)
+        .bonusItem__numb
+          background: url(../img/circle-2.png) no-repeat 50% 0% / cover
+      &:nth-child(3)
+        .bonusItem__numb
+          background: url(../img/circle-3.png) no-repeat 50% 0% / cover
+      &:nth-child(4)
+        .bonusItem__numb
+          background: url(../img/circle-4.png) no-repeat 50% 0% / cover
+      &:nth-child(5)
+        .bonusItem__numb
+          background: url(../img/circle-5.png) no-repeat 50% 0% / cover
+      &__numb
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        width: 150px
+        height: 165px
+        position: absolute
+        top: -42px
+        &-top
+          font-family: $font-roboto-black
+          color: $white
+          font-size: 128px
+          line-height: 116px
+        &-bottom
+          font-family: $font-suisseintl-semibold
+          color: $white
+          font-size: 14px
+          text-transform: uppercase
+      &__txt
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        &-top
+          width: 100%
+          border-right: 1px solid rgba(255, 38, 126, 0.70)
+          border-left: 1px solid rgba(255, 38, 126, 0.70)
+          background: linear-gradient(270deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 20%, rgba(255, 255, 255, 0.00) 80%, rgba(255, 255, 255, 0.20) 100%), #FF267E
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+          font-family: $font-suisseintl-bold
+          color: $white
+          height: 66px
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 24px
+          line-height: 24px
+          letter-spacing: 0.48px
+          text-transform: uppercase
+        &-bottom
+          margin-top: 16px
+          font-family: $font-suisseintl-bold
+          color: $white
+          font-size: 14px
+          letter-spacing: 0.28px
+          display: flex
+          justify-content: center
+          align-items: center
+          text-transform: uppercase
+      &__arrow
+        z-index: 2
+        position: absolute
+        top: 0
+        right: -52px
+        border: 3px solid rgba($white, 0.5)
+        background-color: rgba($dark-blue, 0.9)
+        width: 67px
+        height: 55px
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        &-small
+          width: 13px
+          height: 13px
+          animation: arrowSlide 1.5s infinite ease-in-out
+          margin-right: -3px
+        &-large
+          width: 16px
+          height: 16px
+          animation: arrowSlide 1.5s infinite ease-in-out
+    &-fs
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 67px
+      &-left
+        height: 100%
+        padding: 0 24px
+        display: flex
+        align-items: center
+        background-color: $dark-blue
+        color: $white
+        font-family: $font-suisseintl-semibold
+        font-size: 48px
+        line-height: 48px
+        letter-spacing: 0.48px
+        text-transform: uppercase
+      &-right
+        padding: 0 16px
+        color: $white
+        font-family: $font-suisseintl-semibold
+        font-size: 24px
+        letter-spacing: 0.24px
+        text-transform: uppercase
+    .depositBtn
+      margin: 30px auto
+  .drop
+    margin: auto
+    width: 100%
+    padding: 10px 0
+    z-index: 10
+  .dropdown
+    outline: none!important
+    cursor: pointer
+    position: relative
+    width: 100%
+    text-align: start
+    summary::-webkit-details-marker
+      display: none
+    > summary
+      list-style: none
+    summary
+      font-family: $font-suisseintl-bold
+      font-size: 16px
+      color: $white
+      width: 100%
+      padding: 10px 8px 9px 8px
+      outline: none!important
+      position: relative
+      display: flex
+      align-items: center
+      text-transform: uppercase
+      user-select: none
+      border: 1px solid $grey-light
+      z-index: 3
+      ::-webkit-details-marker
+        display: none
+      &:after
+        content: ''
+        background: url('../img/arrow-drop.svg') no-repeat 50% 50%/cover
+        width: 12px
+        height: 12px
+        position: absolute
+        right: 8px
+        top: 14px
+        display: block
+    &[open]
+      summary
+        &:after
+          transform: rotate(180deg)
+    .drop-txt
+      width: 100%
+      margin-top: 20px
+      overflow-wrap: break-word
+      text-align: start
+      cursor: auto
+      background: url('../img/table/bg-rules.png') no-repeat 100% 100%/cover
+      background-size: 100% 100%
+      &-list
+        padding: 35px 40px 40px
+        max-height: 450px
+        overflow-y: auto
+        border: 1px solid $grey-light
+        &::-webkit-scrollbar
+          width: 4px
+          background: $grey
+        &::-webkit-scrollbar-thumb
+          background: $magenta
+          width: 4px
+        p, h2, h3, h4, h5, h6, strong, div, span, ul>li, ol>li
+          margin-bottom: 10px
+          font-size: 14px
+          line-height: 22px
+          font-family: $font-suisseintl-reg
+          color: $white
+          display: block
+          &:last-child
+            margin-bottom: 0
+        a
+          color: $white
+          font-family: $font-suisseintl-bold
+          text-decoration: underline
+          position: relative
+          &:hover
+            text-decoration: none
+        .retreat1
+          padding-left: 20px
+        .retreat2
+          padding-left: 30px
+        .circle
+          padding-left: 20px
+          &:before
+            content: ''
+            width: 4px
+            height: 4px
+            background: $white
+            border-radius: 50%
+            display: inline-block
+            margin: 0 5px 3px 0
+  .details
+    margin: 16px 0 30px
+    width: 100%
+    p
+      color: $white
+      font-family: $font-suisseintl-reg
+      font-size: 16px
+      line-height: 22px
+      letter-spacing: 0.64px
+      margin-bottom: 10px
+
+
+
+@keyframes arrowSlide
+  0%
+    transform: translateX(-10px)
+    opacity: 0
+  30%
+    opacity: 1
+  70%
+    opacity: 1
+  100%
+    transform: translateX(10px)
+    opacity: 0
+
