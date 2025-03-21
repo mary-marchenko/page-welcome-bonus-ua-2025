@@ -1,6 +1,6 @@
 $blue: #000055
 $dark-blue: #000056
-$dark-bg: #12131C
+$dark-bg: #191a23
 $blueBtn: #00003D
 $blueBorder: #1F2154
 $btn: #05C489
@@ -48,9 +48,9 @@ body.dark
   background: $dark-bg
   .welcome__top
     &:after
-      background: linear-gradient(180deg, rgba(18, 19, 28, 0) 0%, rgba(18, 19, 28, 1.92) 90%)
+      background: linear-gradient(180deg, rgba(25, 26, 35, 0) 0%, rgba(25, 26, 35, 1.92) 90%)
       @media screen and (max-width: 1050px)
-        background: linear-gradient(180deg, rgba(18, 19, 28, 0) 0%, rgba(18, 19, 28, 1.92) 69%)
+        background: linear-gradient(180deg, rgba(25, 26, 35, 0) 0%, rgba(25, 26, 35, 1.92) 69%)
 body
   -webkit-tap-highlight-color: transparent
   overscroll-behavior: none
@@ -117,7 +117,7 @@ body
       height: 100px
       left: 0
       bottom: -1px
-      background: linear-gradient(180deg, rgba(0, 0, 61, 0) 0%, rgba(0, 0, 61, 1.92) 100%)
+      background: linear-gradient(180deg, rgba(0, 0, 61, 0) 0%, rgba(0, 0, 61, 1.92) 90%)
     &-left
       display: flex
       flex-direction: column
@@ -370,7 +370,7 @@ body
       font-size: 16px
       color: $white
       width: 100%
-      padding: 10px 8px 9px 8px
+      padding: 10px 40px 9px 40px
       outline: none!important
       position: relative
       display: flex
@@ -387,7 +387,7 @@ body
         width: 12px
         height: 12px
         position: absolute
-        right: 8px
+        right: 40px
         top: 14px
         display: block
       &.noios-padding
@@ -409,6 +409,7 @@ body
         max-height: 450px
         overflow-y: auto
         border: 1px solid $grey-light
+        border-right: 0
         &::-webkit-scrollbar
           width: 4px
           background: $grey

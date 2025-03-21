@@ -350,7 +350,7 @@
         padding-bottom: 0
         padding-right: 20px
         margin-bottom: 20px
-        background: linear-gradient(0deg, rgba(0, 0, 34, 0.00) 52%, rgba(0, 0, 34, 0.10) 79.88%), radial-gradient(60.97% 59.67% at 53.04% 50.75%, rgba(56, 60, 162, 0.71) 51.73%, rgba(0, 0, 86, 0.00) 80.38%)
+        background: linear-gradient(0deg, rgba(0, 0, 34, 0) 76%, rgba(0, 0, 34, 0.1) 79.88%), radial-gradient(51.97% 59.67% at 53.04% 50.75%, rgba(56, 60, 162, 0.71) 51.73%, rgba(0, 0, 86, 0) 90.38%)
         &:not(:last-child)
           margin-right: 0
         &__numb
@@ -417,9 +417,14 @@
           justify-content: center
           align-items: center
           &.noios-padding
-  .dropdown
-    .drop-txt-list
-      padding: 20px
+    .dropdown
+      summary
+        padding-left: 20px
+        &:after
+          right: 20px
+      .drop-txt-list
+        padding: 20px
+        max-height: 270px
 
 @media screen and (max-width: 540px)
   .welcome
