@@ -1,6 +1,8 @@
 $blue: #000055
 $dark-blue: #000056
-$bluBtn: #00003D
+$dark-bg: #12131C
+$blueBtn: #00003D
+$blueBorder: #1F2154
 $btn: #05C489
 $btn-hover: #05b37c
 $white: #ffffff
@@ -15,12 +17,46 @@ $font-suisseintl-bold: SuisseIntl-Bold, sans-serif //700
 
 $font-roboto-black: Roboto-Black, sans-serif //900
 
+//test
+.menu-btn
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 20
+  width: fit-content
+  background: white
+  padding: 3px
+
+.menu-test
+  position: fixed
+  left: 0
+  top: 25px
+  z-index: 20
+  display: flex
+  gap: 2px
+  flex-direction: column
+  & > button
+    width: fit-content
+    background: white
+    color: black
+    padding: 2px
+    font-family: inherit
+    border-radius: 2px
+
+// DARK
+body.dark
+  background: $dark-bg
+  .welcome__top
+    &:after
+      background: linear-gradient(180deg, rgba(18, 19, 28, 0) 0%, rgba(18, 19, 28, 1.92) 90%)
+      @media screen and (max-width: 1050px)
+        background: linear-gradient(180deg, rgba(18, 19, 28, 0) 0%, rgba(18, 19, 28, 1.92) 69%)
 body
   -webkit-tap-highlight-color: transparent
   overscroll-behavior: none
-  background: $bluBtn
+  background: $blueBtn
   &.light
-    background: $blue
+    background: $blueBtn
   img
     max-width: 100%
     height: auto
@@ -35,12 +71,13 @@ body
   letter-spacing: 0.32px
   text-transform: uppercase
   font-size: 18px
-  color: $bluBtn
+  color: $blueBtn
   font-family: $font-suisseintl-semibold
   min-width: 298px
   border-radius: 3.4px
   height: 71px
   max-width: fit-content
+  &.noios-padding
   &:hover
     background-color: $btn-hover
   &.big
@@ -48,6 +85,7 @@ body
     min-width: 397px
     border-radius: 7px
     height: 99px
+    &.noios-padding
 .container
   max-width: 1246px
   width: 100%
@@ -65,9 +103,7 @@ body
     justify-content: center
     position: relative
     background: url('../img/bg-desk.jpg') no-repeat 50% 0%/cover
-    @media screen and (min-width: 600px) and (orientation: landscape) and (min-height: 501px)
-      background: url('../img/bg-desk.jpg') no-repeat 50% 0%/cover
-    @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
+    @media screen and (max-width: 1050px)
       background: url('../img/bg-tab.jpg') no-repeat 50% 0/cover
     @media screen and (max-width: 600px) and (orientation: portrait)
       background: url("../img/bg-mob.jpg") no-repeat 100% 0%/cover
@@ -83,14 +119,14 @@ body
       bottom: -1px
       background: linear-gradient(180deg, rgba(0, 0, 61, 0) 0%, rgba(0, 0, 61, 1.92) 100%)
     &-left
-      //margin-left: 64px
       display: flex
       flex-direction: column
       justify-content: center
       align-items: center
+      .depositBtn
+        align-self: flex-start
     &-right
       overflow: hidden
-      //width: 1023px
       width: 900px
       align-self: flex-end
       margin-left: -65px
@@ -111,7 +147,7 @@ body
     &-cont
       display: flex
       flex-direction: column
-      width: 436px
+      min-width: 434px
       position: relative
       z-index: 3
       &:before
@@ -141,12 +177,15 @@ body
       letter-spacing: 0.64px
       text-transform: uppercase
       font-family: $font-suisseintl-semibold
-      max-height: 71px
+      height: 71px
       z-index: 2
       &.txtMagenta
         background-color: $magenta
         padding-left: 30px
         white-space: nowrap
+        align-items: center
+        padding-top: 5px
+        &.noios-padding
         span
           font-family: $font-suisseintl-semibold
           color: $white
@@ -154,11 +193,11 @@ body
           letter-spacing: 0.29px
           text-transform: uppercase
           margin-right: 14px
-          display: flex
-          align-items: flex-end
+          margin-bottom: -23px
       &.txtBlue
         background-color: $dark-blue
         align-items: center
+        &.noios-padding
   &__center
     margin-top: 31px
     &-bonuses
@@ -181,18 +220,28 @@ body
       &:nth-child(1)
         .bonusItem__numb
           background: url(../img/circle-1.png) no-repeat 50% 0% / cover
+          @media screen and (max-width: 1050px)
+            background: url(../img/circle-1-tab.png) no-repeat 50% 0% / cover
       &:nth-child(2)
         .bonusItem__numb
           background: url(../img/circle-2.png) no-repeat 50% 0% / cover
+          @media screen and (max-width: 1050px)
+            background: url(../img/circle-2-tab.png) no-repeat 50% 0% / cover
       &:nth-child(3)
         .bonusItem__numb
           background: url(../img/circle-3.png) no-repeat 50% 0% / cover
+          @media screen and (max-width: 1050px)
+            background: url(../img/circle-3-tab.png) no-repeat 50% 0% / cover
       &:nth-child(4)
         .bonusItem__numb
           background: url(../img/circle-4.png) no-repeat 50% 0% / cover
+          @media screen and (max-width: 1050px)
+            background: url(../img/circle-4-tab.png) no-repeat 50% 0% / cover
       &:nth-child(5)
         .bonusItem__numb
           background: url(../img/circle-5.png) no-repeat 50% 0% / cover
+          @media screen and (max-width: 1050px)
+            background: url(../img/circle-5-tab.png) no-repeat 50% 0% / cover
       &__numb
         display: flex
         justify-content: center
@@ -211,6 +260,7 @@ body
           font-family: $font-suisseintl-semibold
           color: $white
           font-size: 14px
+          letter-spacing: 0.28px
           text-transform: uppercase
       &__txt
         width: 100%
@@ -234,9 +284,10 @@ body
           line-height: 24px
           letter-spacing: 0.48px
           text-transform: uppercase
+          &.noios-padding
         &-bottom
           margin-top: 16px
-          font-family: $font-suisseintl-bold
+          font-family: $font-suisseintl-semibold
           color: $white
           font-size: 14px
           letter-spacing: 0.28px
@@ -244,6 +295,7 @@ body
           justify-content: center
           align-items: center
           text-transform: uppercase
+          &.noios-padding
       &__arrow
         z-index: 2
         position: absolute
@@ -271,6 +323,9 @@ body
       align-items: center
       justify-content: center
       height: 67px
+      border: 1px solid $blueBorder
+      width: max-content
+      margin: 0 auto
       &-left
         height: 100%
         padding: 0 24px
@@ -283,6 +338,8 @@ body
         line-height: 48px
         letter-spacing: 0.48px
         text-transform: uppercase
+        &.noios-padding
+          padding-top: 2px
       &-right
         padding: 0 16px
         color: $white
@@ -290,6 +347,7 @@ body
         font-size: 24px
         letter-spacing: 0.24px
         text-transform: uppercase
+        &.noios-padding
     .depositBtn
       margin: 30px auto
   .drop
@@ -332,6 +390,8 @@ body
         right: 8px
         top: 14px
         display: block
+      &.noios-padding
+        padding-top: 1px
     &[open]
       summary
         &:after
@@ -345,7 +405,7 @@ body
       background: url('../img/table/bg-rules.png') no-repeat 100% 100%/cover
       background-size: 100% 100%
       &-list
-        padding: 35px 40px 40px
+        padding: 28px 40px 40px
         max-height: 450px
         overflow-y: auto
         border: 1px solid $grey-light
@@ -408,5 +468,29 @@ body
     opacity: 1
   100%
     transform: translateX(10px)
+    opacity: 0
+
+@keyframes arrowSlideTab
+  0%
+    transform: translateX(-5px)
+    opacity: 0
+  30%
+    opacity: 1
+  70%
+    opacity: 1
+  100%
+    transform: translateX(5px)
+    opacity: 0
+
+@keyframes arrowSlideMob
+  0%
+    transform: translateX(-2px)
+    opacity: 0
+  30%
+    opacity: 1
+  70%
+    opacity: 1
+  100%
+    transform: translateX(2px)
     opacity: 0
 

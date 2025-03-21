@@ -2,9 +2,515 @@
   .welcome
     &__top
       &-left
-        margin-left: 64px
+        margin-left: 40px
+
+@media screen and (max-width: 1300px)
+  .welcome
+    &__top
+      height: 635px
+      &-left
+        margin-left: 45px
+        transform: scale(0.9)
+        transform-origin: center
+    &__center
+      transform: scale(0.9)
+      transform-origin: center
+    .container
+      width: 90%
+      &.welcome__top,
+      &.welcome__center
+        width: 100%
+
+@media screen and (max-width: 1207px)
+  .welcome
+    &__top
+      height: 592px
+      &-left
+        transform: scale(0.85)
+        transform-origin: center
+    &__center
+      .bonusItem
+        &__txt
+          &-top
+            font-size: 19px
+            line-height: 19px
+          &-bottom
+            font-size: 10.5px
+        &__arrow
+          width: 49px
+          height: 40px
+          right: -42px
+          &-small
+            width: 10.5px
+            height: 10.5px
+          &-large
+            width: 13px
+            height: 13px
+
+@media screen and (max-width: 1140px)
+  .welcome
+    &__top
+      height: 520px
+      &-left
+        transform: scale(0.75)
+        transform-origin: center left
+
+@media screen and (max-width: 1070px)
+  .welcome
+    &__top
+      height: 470px
+
+@media screen and (max-width: 1050px)
+  .depositBtn
+    font-size: 18px
+    letter-spacing: 0.18px
+    min-width: 298px
+    border-radius: 4px
+    height: 55px
+    &.noios-padding
+    &.big
+      font-size: 18px
+      min-width: 223px
+      height: 55px
+      border-radius: 4px
+      letter-spacing: 0.18px
+      &.noios-padding
+  .welcome
+    .container
+      max-width: 850px
+      &.welcome__top
+        max-width: 1050px
+    &__top
+      &:after
+        background: linear-gradient(180deg, rgba(0, 0, 61, 0) 0%, rgb(0, 0, 61) 69%)
+      &-left
+        transform: scale(1)
+      &-right
+        width: 561px
+        margin-left: 14px
+      &-left
+        margin-left: 0
+    &__block
+      margin-bottom: 70px
+      &-title
+        font-size: 24px
+        letter-spacing: 0.24px
+      &-cont
+        min-width: 245px
+        &:before
+          width: 34px
+          height: 29px
+          bottom: calc(50% - 15px)
+          left: -17px
+        &:after
+          width: 300px
+          height: 85px
+          left: -25px
+          bottom: -40px
+      &-txt
+        font-size: 36px
+        letter-spacing: 0.36px
+        height: 40px
+        &.txtMagenta
+          padding-left: 15px
+          padding-top: 2px
+          span
+            font-size: 16px
+            margin-right: 8px
+            margin-bottom: -13px
+          &.noios-padding
+        &.txtBlue
+          &.noios-padding
+    &__center
+      transform: scale(1)
+      margin-top: -11px
+      &-bonuses
+        transform: scale(1.2)
+        margin-bottom: 50px
+      .bonusItem
+        border-radius: 4px
+        background: linear-gradient(0deg, rgba(0, 0, 61, 0.54) 0%, rgba(0, 0, 61, 0.00) 49.74%, rgba(0, 0, 61, 0.54) 83.76%), radial-gradient(103.98% 77.29% at 50.23% 55.9%, rgba(56, 60, 162, 0.71) 61.41%, rgba(0, 0, 61, 0.00) 80.14%)
+        width: 128px
+        height: 221px
+        &:not(:last-child)
+          margin-right: 16px
+        &__txt
+          &-top
+            height: 56px
+            font-size: 16px
+            line-height: 16px
+            letter-spacing: 0.32px
+            &.noios-padding
+          &-bottom
+            padding: 0 5px
+            text-align: center
+            font-size: 14px
+            letter-spacing: 0.28px
+            margin-top: 12px
+            &.noios-padding
+        &__numb
+          width: 90px
+          height: 90px
+          top: -6px
+          &-top
+            padding-top: 15px
+            font-size: 60px
+            line-height: 66px
+        &__arrow
+          right: -25px
+          top: 16px
+          width: 36.5px
+          height: 31px
+          border: 1px solid rgba(255, 255, 255, 0.5)
+          &-small
+            margin-right: -2px
+            width: 7px
+            height: 7px
+            animation: arrowSlideTab 1.5s infinite ease-in-out
+          &-large
+            width: 9px
+            height: 9px
+            animation: arrowSlideTab 1.5s infinite ease-in-out
+      .depositBtn
+        margin: 25px auto 20px
+      &-fs
+        &-left
+          font-size: 36px
+          line-height: 36px
+          letter-spacing: 0.36px
+          &.noios-padding
+    .details
+      margin-top: 0
+      p
+        margin-bottom: 7px
+
+@media screen and (max-width: 932px)
+  .welcome
+    .container
+      max-width: 770px
+      &.welcome__top
+        max-width: 950px
+    &__top
+      height: 440px
+      &-left
+        margin-left: 34px
+      &-right
+        width: 517px
+    &__center
+      &-bonuses
+        transform: scale(1.1)
+        margin-bottom: 50px
+
+@media screen and (max-width: 844px)
+  .welcome
+    .container
+      max-width: 707px
+    &__top
+      height: 390px
+      &-right
+        width: 459px
+        margin-left: 0
+    &__block
+      margin-bottom: 50px
+    &__center
+      &-bonuses
+        transform: scale(1)
+        margin-bottom: 50px
+
+@media screen and (max-width: 777px)
+  .welcome
+    &__top
+      height: 375px
+      &:after
+        height: 147px
+        bottom: -40px
+      &-left
+        margin-left: 44px
+        justify-content: center
+        margin-top: -50px
+      &-right
+        margin-bottom: -40px
+        margin-left: -8px
+        width: 488px
+    &__center
+      z-index: 3
+      position: relative
+      &-bonuses
+        margin-bottom: 30px
+      &-fs
+        transform: scale(0.8)
+        transform-origin: center
+    &__block
+      margin-bottom: 52px
+
+@media screen and (max-width: 740px)
+  .welcome
+    .container
+      max-width: 630px
+    &__top
+      height: 335px
+      &-left
+        transform: scale(0.85)
+        margin-left: 55px
+        margin-top: -35px
+      &-right
+        margin-left: -30px
+        width: 450px
+    &__center
+      &-bonuses
+        transform: scale(0.9)
+        margin-bottom: 10px
+      .bonusItem
+        flex-shrink: 0
+
+@media screen and (max-width: 700px)
+  .welcome
+    .container
+      max-width: 570px
+    &__top
+      height: 320px
+      &-left
+        transform: scale(0.8)
+        margin-left: 55px
+      &-right
+        margin-left: -53px
+        width: 412px
+    &__center
+      &-bonuses
+        transform: scale(0.8)
+        margin-bottom: 0
+
+@media screen and (max-width: 650px)
+  .welcome
+    &__top
+      height: 300px
+      &-left
+        transform: scale(0.75)
+        margin-left: 55px
+      &-right
+        margin-left: -60px
+
+@media screen and (max-width: 630px)
+  .welcome
+    &__top
+      &-right
+        margin-left: -70px
+
+@media screen and (max-width: 600px)
+  .depositBtn
+    min-width: 298px
+    &.noios-padding
+    &.big
+      min-width: 298px
+      left: 50%
+      transform: translateX(-50%)
+      &.noios-padding
+  .welcome
+    .container
+      &.welcome__top
+        max-width: 100%
+        margin-bottom: 30px
+    &__top
+      height: 580px
+      flex-direction: column
+      align-items: center
+      position: relative
+      justify-content: flex-start
+      &:after
+        z-index: 1
+        bottom: -70px
+        height: 176px
+      &-left
+        transform: scale(1)
+        margin-left: 0
+        margin-top: 22px
+        position: relative
+        justify-content: flex-start
+        z-index: 2
+        .depositBtn
+          position: absolute
+          bottom: -430px
+          z-index: 4
+      &-right
+        width: 100%
+        margin-top: 20px
+        margin-bottom: -76px
+    &__block
+      margin-bottom: 0
+      transform: scale(1.2)
+    &__center
+      &-bonuses
+        transform: scale(1)
+        flex-direction: column
+        align-items: center
+      .bonusItem
+        flex-direction: row
+        width: 343px
+        height: 67px
+        padding-bottom: 0
+        padding-right: 20px
+        margin-bottom: 20px
+        background: linear-gradient(0deg, rgba(0, 0, 34, 0.00) 52%, rgba(0, 0, 34, 0.10) 79.88%), radial-gradient(60.97% 59.67% at 53.04% 50.75%, rgba(56, 60, 162, 0.71) 51.73%, rgba(0, 0, 86, 0.00) 80.38%)
+        &:not(:last-child)
+          margin-right: 0
+        &__numb
+          position: relative
+          margin-right: 12px
+        &__txt
+          height: 38px
+          &-top
+            white-space: nowrap
+            font-size: 16px
+            line-height: 23px
+            letter-spacing: 0.32px
+            br
+              display: none
+            &.noios-padding
+          &-bottom
+            margin-top: 8px
+        &__numb
+          width: 61px
+          height: 61px
+          &-top
+            padding-top: 15px
+            font-size: 40px
+            line-height: 40px
+          &-bottom
+            font-size: 12px
+            letter-spacing: 0.24px
+        &__arrow
+          rotate: 90deg
+          width: 22.34px
+          height: 26px
+          top: 64px
+          right: 43%
+          &-small
+            width: 5px
+            height: 5px
+            animation: arrowSlideMob 1.5s infinite ease-in-out
+          &-large
+            width: 7px
+            height: 7px
+            animation: arrowSlideMob 1.5s infinite ease-in-out
+      &-fs
+        height: 120px
+        min-width: 345px
+        margin-top: 15px
+        margin-bottom: 10px
+        transform: scale(1)
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        &-left
+          width: 100%
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          font-size: 36px
+          height: 50%
+          &.noios-padding
+        &-right
+          font-size: 20px
+          letter-spacing: 0.8px
+          height: 50%
+          display: flex
+          justify-content: center
+          align-items: center
+          &.noios-padding
+  .dropdown
+    .drop-txt-list
+      padding: 20px
+
+@media screen and (max-width: 540px)
+  .welcome
+    &__top
+      height: 530px
+      &-left
+        .depositBtn
+          bottom: -395px
+
+@media screen and (max-width: 475px)
+  .welcome
+    &__top
+      height: 500px
+      &:after
+        bottom: -45px
+      &-left
+        .depositBtn
+          bottom: -365px
+
+@media screen and (max-width: 400px)
+  .welcome
+    &__block
+      transform: scale(1)
+    &__top
+      height: 437px
+      &-left
+        .depositBtn
+          bottom: -306px
 
 
+@media screen and (max-width: 370px)
+  .welcome
+    &__center
+      .bonusItem
+        width: 95%
+        &__numb
+          &-top
+            padding-top: 5px
+          &-bottom
+            font-size: 10px
+        &__txt
+          &-top
+            font-size: 14px
+            line-height: 20px
+          &-bottom
+            font-size: 12px
+      &-fs
+        min-width: 90%
+        &-right
+          font-size: 18px
+
+@media screen and (max-width: 340px)
+  .depositBtn
+    min-width: 278px
+    &.big
+      min-width: 278px
+  .welcome
+    &__center
+    .bonusItem
+      width: 95%
+      &__numb
+        &-top
+          padding-top: 5px
+        &-bottom
+          font-size: 9px
+      &__txt
+        &-top
+          font-size: 13px
+          line-height: 19px
+        &-bottom
+          font-size: 11px
+      &-fs
+        &-right
+          font-size: 16px
+
+@media screen and (max-width: 320px)
+  .depositBtn
+    min-width: 270px
+    &.big
+      min-width: 270px
+  .welcome
+    .bonusItem
+      &__txt
+        &-top
+          font-size: 11px
+          line-height: 15px
+        &-bottom
+          font-size: 9px
+    .dropdown
+      .drop-txt-list
+        padding: 10px
 
 
 //@media screen and (min-width: 2200px) and (orientation: landscape)
