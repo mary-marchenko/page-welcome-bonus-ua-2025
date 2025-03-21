@@ -1,6 +1,7 @@
 $blue: #000055
 $dark-blue: #000056
 $dark-bg: #191a23
+$dark-arrow: #191A23
 $blueBtn: #00003D
 $blueBorder: #1F2154
 $btn: #05C489
@@ -46,11 +47,31 @@ $font-roboto-black: Roboto-Black, sans-serif //900
 // DARK
 body.dark
   background: $dark-bg
-  .welcome__top
-    &:after
-      background: linear-gradient(180deg, rgba(25, 26, 35, 0) 0%, rgba(25, 26, 35, 1.92) 90%)
-      @media screen and (max-width: 1050px)
-        background: linear-gradient(180deg, rgba(25, 26, 35, 0) 0%, rgba(25, 26, 35, 1.92) 69%)
+  .welcome
+    &__top
+      &:after
+        background: linear-gradient(180deg, rgba(25, 26, 35, 0) 0%, rgba(25, 26, 35, 1.92) 90%)
+        @media screen and (max-width: 1050px)
+          background: linear-gradient(180deg, rgba(25, 26, 35, 0) 0%, rgba(25, 26, 35, 1.92) 69%)
+    &__center
+      .bonusItem
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 58.9%, rgba(255, 255, 255, 0.05) 83.76%), radial-gradient(103.34% 76.82% at 50.23% 56.37%, rgba(255, 255, 255, 0.05) 61.34%, rgba(255, 255, 255, 0) 80.14%)
+        &__arrow
+          background-color: $dark-arrow
+      &-fs
+        border: 1px solid #282B35
+        &-left
+          background-color: #282B35
+    &__block
+      &-cont
+        &:before
+          filter: grayscale(.5) brightness(1)
+      &-txt
+        &.txtBlue
+          background-color: #191a23
+
+
+
 body
   -webkit-tap-highlight-color: transparent
   overscroll-behavior: none
@@ -78,6 +99,7 @@ body
   height: 71px
   max-width: fit-content
   &.noios-padding
+    padding-top: 8px
   &:hover
     background-color: $btn-hover
   &.big
@@ -86,6 +108,7 @@ body
     border-radius: 7px
     height: 99px
     &.noios-padding
+      padding-top: 9px
 .container
   max-width: 1246px
   width: 100%
@@ -129,7 +152,7 @@ body
       overflow: hidden
       width: 900px
       align-self: flex-end
-      margin-left: -65px
+      margin-left: -75px
   &__block
     display: flex
     flex-direction: column
@@ -186,6 +209,7 @@ body
         align-items: center
         padding-top: 5px
         &.noios-padding
+          padding-top: 10px
         span
           font-family: $font-suisseintl-semibold
           color: $white
@@ -198,6 +222,7 @@ body
         background-color: $dark-blue
         align-items: center
         &.noios-padding
+          padding-top: 10px
   &__center
     margin-top: 31px
     &-bonuses
@@ -285,6 +310,7 @@ body
           letter-spacing: 0.48px
           text-transform: uppercase
           &.noios-padding
+            padding-top: 3px
         &-bottom
           margin-top: 16px
           font-family: $font-suisseintl-semibold
@@ -296,6 +322,7 @@ body
           align-items: center
           text-transform: uppercase
           &.noios-padding
+            padding-top: 4px
       &__arrow
         z-index: 2
         position: absolute
@@ -339,7 +366,7 @@ body
         letter-spacing: 0.48px
         text-transform: uppercase
         &.noios-padding
-          padding-top: 2px
+          padding-top: 10px
       &-right
         padding: 0 16px
         color: $white
@@ -348,6 +375,7 @@ body
         letter-spacing: 0.24px
         text-transform: uppercase
         &.noios-padding
+          padding-top: 10px
     .depositBtn
       margin: 30px auto
   .drop
@@ -370,7 +398,7 @@ body
       font-size: 16px
       color: $white
       width: 100%
-      padding: 10px 40px 9px 40px
+      padding: 20px 40px 19px 40px
       outline: none!important
       position: relative
       display: flex
@@ -391,7 +419,7 @@ body
         top: 14px
         display: block
       &.noios-padding
-        padding-top: 1px
+        padding-top: 26px
     &[open]
       summary
         &:after
