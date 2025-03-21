@@ -339,12 +339,10 @@
 @media screen and (max-width: 600px)
   .depositBtn
     min-width: 298px
-    &.noios-padding
     &.big
       min-width: 298px
       left: 50%
       transform: translateX(-50%)
-      &.noios-padding
   .welcome
     .container
       &.welcome__top
@@ -406,8 +404,11 @@
             br
               display: none
             &.noios-padding
+              padding-top: 4px
           &-bottom
             margin-top: 8px
+            &.noios-padding
+              padding-top: 0
         &__numb
           width: 61px
           height: 61px
@@ -456,7 +457,6 @@
           display: flex
           justify-content: center
           align-items: center
-          &.noios-padding
     .dropdown
       summary
         padding: 15px 40px 14px 20px
@@ -464,7 +464,7 @@
           right: 20px
           top: 20px
         &.noios-padding
-
+          padding-top: 16px
       .drop-txt-list
         padding: 20px
         max-height: 270px
