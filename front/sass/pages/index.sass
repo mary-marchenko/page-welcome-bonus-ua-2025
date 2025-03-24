@@ -59,9 +59,11 @@ body.dark
         filter: grayscale(.5)
     &__center
       .bonusItem
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 58.9%, rgba(255, 255, 255, 0.05) 83.76%), radial-gradient(103.34% 76.82% at 50.23% 56.37%, rgba(255, 255, 255, 0.05) 61.34%, rgba(255, 255, 255, 0) 80.14%)
-        &__arrow
-          background-color: $dark-arrow
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.02) 35%, rgba(255, 255, 255, 0.04) 55%, rgba(255, 255, 255, 0.02) 85%, rgba(255, 255, 255, 0) 100%), radial-gradient(103.34% 76.82% at 50.23% 56.37%, rgba(255, 255, 255, 0.04) 45%, rgba(255, 255, 255, 0) 85%)
+        @media screen and (max-width: 600px)
+          background: linear-gradient(0deg, rgba(0, 0, 34, 0) 76%, rgba(0, 0, 34, 0.1) 79.88%), radial-gradient(51.97% 59.67% at 53.04% 50.75%, rgba(255, 255, 255, 0.1) 51.73%, rgba(0, 0, 86, 0) 90.38%)
+      &__arrow
+        background-color: $dark-arrow
       &-fs
         border: 1px solid #282B35
         &-left
@@ -135,9 +137,9 @@ body
       content: ""
       position: absolute
       display: block
-      width: 100%
+      width: 101%
       height: 100px
-      left: 0
+      left: -2px
       bottom: -1px
       background: linear-gradient(180deg, rgba(0, 0, 61, 0) 0%, rgba(0, 0, 61, 1.92) 90%)
     &:before
@@ -454,7 +456,6 @@ body
         max-height: 450px
         overflow-y: auto
         border: 1px solid $grey-light
-        border-right: 0
         &::-webkit-scrollbar
           width: 4px
           background: $grey
