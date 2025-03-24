@@ -51,9 +51,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-
-
-// TEST
-document.querySelector('.dark-btn').addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-});
